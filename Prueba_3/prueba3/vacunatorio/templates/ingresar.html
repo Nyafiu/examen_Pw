@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body class="f">
+
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <img src="{% static 'img/logo-180x180-1.png' %}" alt="">
+          </div>
+          <div class="col">
+            <span></span>
+          </div>
+          <div class="col">
+            <span></span>
+          </div>
+        </div>
+    </div>
+    <h1 class="display-6" style="text-align: center;">Registro</h1>
+    <br><br>
+    
+    <script type="text/javascript" src="{% static 'js/validar.js' %}"></script> 
+    <div class="container formu">
+        <form action="/ingresar_informacion/" method="get" id="formulario" class="form-container" name="formulario">
+            <div class="row">
+                <div class="col">
+                    <label for="" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" name="txt_nombre">
+                </div>
+                <div class="col">
+                    <label for="" class="form-label">Apellido Paterno:</label>
+                    <input type="text" class="form-control" name="txt_appaterno">
+                </div>
+                <div class="col">
+                    <label for="" class="form-label">Apellido Materno:</label>
+                    <input type="text" class="form-control" name="txt_apmaterno">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="col">
+                        <br>
+                        <label for="" class="form-label">Rut:</label>
+                        <input type="text" class="form-control" name="txt_rut">
+                    </div>
+                    <div class="col">
+                        <br>
+                        <label for="" class="form-label">Edad:</label>
+                        <input type="number" class="form-control" name="txt_edad">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <br>
+                        <label for="" class="form-label">Nombre vacuna:</label>
+                        <input type="text" class="form-control" name="txt_vacuna_nombre">
+                    </div>
+                    <div class="col">
+                        <br>
+                        <label for="" class="form-label">Fecha:</label>
+                        <input type="date" class="form-control" name="fecha">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <br>
+                        <input type="button" value="Enviar" onclick="javascript:void(validar())">
+                        <button class="botones"><a href="/index/" class="link-dark" style="text-decoration: none;">Volver a inicio</a></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br><br>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+</body>
+</html>
