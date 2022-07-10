@@ -47,3 +47,42 @@ function validar()
     document.formulario.submit() = true
     alert("Ingreso correcto");
 }
+
+function validar_vacuna(){
+
+    var vacuna_nombre = document.formu.txt_nombre_vacuna.value;
+    var fabricacion = document.formu.txt_fabricacion.value;
+    var tipo_vacuna = document.formu.txt_tipo_vacuna.value;
+    var lote = document.formu.txt_lote.value;
+    var administracion = document.formu.txt_administracion.value;
+
+    if(vacuna_nombre.length<=2){
+        alert("el nombre de la vacuna debe tener mas de 2 caracteres...");
+        document.formu.txt_nombre_vacuna.focus();
+        return false;
+    }
+    if(fabricacion.length<=2){
+        alert("la fabricacion debe tener mas de 2 caracteres...");
+        document.formu.txt_fabricacion.focus();
+        return false;
+    }
+    if(tipo_vacuna.length<=2){
+        alert("el tipo de vacuna debe tener mas de 2 caracteres...");
+        document.formu.txt_tipo_vacuna.focus();
+        return false;
+    }
+    if(lote.length<=2){
+        alert("el lote debe tener mas de 2 caracteres...");
+        document.formu.txt_lote.focus();
+        return false;
+    }
+    if(administracion.length<=2){
+        alert("La administracion debe tener mas de 2 caracteres...");
+        document.formu.txt_administracion.focus();
+        return false;
+    }
+    document.formu.action = "/vacuna_ingresada/"
+    document.formu.submit() = true
+    alert("Ingreso correcto");
+    
+}

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/vacuna_ingresada/" method="get">
-        <input type="text" name="txt_nombre_vacuna" placeholder="nombre vacuna">
-        <input type="text" name="txt_fabricacion" placeholder="fabricante">
-        <input type="text" name="txt_tipo_vacuna" placeholder="tipo vacuna">
-        <input type="text" name="txt_lote" placeholder="lote">
-        <input type="text" name="txt_administracion" placeholder="tipo de administracion">     
-        <input type="submit" value="uwu">
+    <script type="text/javascript" src="{% static 'js/validar.js' %}"></script> 
+    <form action="/vacuna_ingresada/" id="formu" name="formu" method="get">
+        <input type="text" name="txt_nombre_vacuna" id="txt_nombre_vacuna" placeholder="nombre vacuna">
+        <input type="text" name="txt_fabricacion" id="txt_fabricacion" placeholder="fabricante">
+        <input type="text" name="txt_tipo_vacuna" id="txt_tipo_vacuna" placeholder="tipo vacuna">
+        <input type="text" name="txt_lote" id="txt_lote" placeholder="lote">
+        <input type="text" name="txt_administracion" id="txt_administracion" placeholder="tipo de administracion">     
+        <input type="button" value="Ingresar" onclick="javascript:void(validar_vacuna())">
     </form>
 </body>
 </html>

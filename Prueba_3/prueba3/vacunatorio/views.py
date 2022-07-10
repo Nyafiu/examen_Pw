@@ -52,6 +52,18 @@ def buscar(request):
 def ingreso_vacuna(request):
     return render(request,"ingreso_vacuna.html")
 
+def listar_vacunas(request):
+    return render(request,"listar_vacuna.html")
+
+def actualizar_vacuna(request):
+    return render(request,"actualizar_vacuna.html")
+
+def eliminar_vacuna(request):
+    return render(request,"eliminar_vacuna.html")
+
+def buscar_vacuna(request):
+    return render(request,"busca_vacuna.html")
+
 def datos_vacuna(request):
     vacuna_aux=request.GET["txt_nombre_vacuna"]
     fabricante_aux=request.GET["txt_fabricacion"]
@@ -65,3 +77,47 @@ def datos_vacuna(request):
     else:
         mensaje=("Error al ingresar la vacuna")
     return HttpResponse(mensaje+"<br><h1><a href='/index/'>Volver al inicio</a></h1>")
+
+def listar_vacuna(request):
+    datos = Vacuna.objects.all()
+    return render(request,"listar_vacuna.html",{'datos':datos})
+
+
+def modificar(request):
+    if request.GET["txt_id"]:
+        id_recibido = request.GET["txt_id"]
+        nombre_recibido = request.GET["txt_nombre_vacuna"]
+        vacuna = Vacuna.objects.filter(id=id_recibido)
+        if vacuna:
+            info = Vacuna.objects.get(id=id_recibido)
+            info.vacuna_nombre = nombre_recibido
+            info.save()
+            mensaje = "Nombre de producto modificado"
+        else:
+            mensaje = "No existe producto para modificar"
+    else:
+        mensaje = "Debe ingresar un id para modificar"
+    return HttpResponse(mensaje+"<a href='/index/'>Volver al inicio</a>")
+
+def eliminacion_vacuna(request):
+    if request.GET["txt_id"]:
+        id_recibido = request.GET["txt_id"]
+        vacuna = Vacuna.objects.filter(id=id_recibido)
+        if vacuna:
+            info = Vacuna.objects.get(id=id_recibido)
+            info.delete()
+            mensaje="Producto eliminado"
+        else:
+            mensaje="Producto No eliminado"
+    else:
+        mensaje = "Debe ingresar un id para eliminar"
+    return HttpResponse(mensaje+"<a href='/index/'>Volver al inicio</a>")
+
+def buscar_vacunas(request):
+    if request.GET["txt_id"]:
+        id_vacuna = request.GET["txt_id"]
+        informacion = Vacuna.objects.filter(id=id_vacuna)
+        return render(request,"buscar_vacuna.html",{"informacion":informacion,"query":id_vacuna})
+    else:
+        mensaje = "<h1>Debe ingresar una id valido...</h1>"
+        return HttpResponse(mensaje+"<br><h1><a href='/index/'>Volver al inicio</a></h1>")

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/listar_vacuna/" method="get" class="formu">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>Nombre vacuna</th>
+              <th>Fabricante</th>
+              <th>Tipo vacuna</th>
+              <th>Lote</th>
+              <th>Forma de administracion</th>
+            </tr>
+          </thead>
+          {% if datos %}
+          {% for info in datos %}
+          <tbody>
+            <td>{{info.id}}</td>
+            <td>{{info.vacuna_nombre}}</td>
+            <td>{{info.fabricante}}</td>
+            <td>{{info.tipo_vacuna}}</td>
+            <td>{{info.lote}}</td>
+            <td>{{info.forma_administracion}}</td>
+          </tbody>
+          {% endfor %}
+          {% endif %}
+        </table>
+        <br>
+        <input class="botones" type="submit" value="Listar">
+        <button class="botones"><a href="/index/" class="link-dark" style="text-decoration: none;">Volver a inicio</a></button>
+      </form>
+</body>
+</html>

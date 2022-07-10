@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5 class="display-7">Id ingresado: {{query}}</h5><br>
+    <table border="1">
+        {% if informacion  %}
+            {% for vacuna in informacion %}        
+            <tr>
+                <td>Nombre vacuna</td> 
+                <td>{{vacuna.vacuna_nombre}}</td>
+            </tr>
+            <tr>
+                <td>Fabricante</td>
+                <td>{{vacuna.fabricante}}</td>
+            </tr>
+            <tr>
+                <td>Tipo vacuna</td>
+                <td>{{vacuna.tipo_vacuna}}</td>
+            </tr>
+            <tr>
+                <td>Lote</td>
+                <td>{{vacuna.lote}}</td>
+        </tr>
+        <tr>
+                <td>Forma de administacion</td>
+                <td>{{vacuna.forma_administracion}}</td>
+            </tr>
+            {% endfor %}
+        {%else %}
+        <h2 class="display-6">El id no se encuentra en el registro.</h2>
+        {% endif %}
+    </table>
+</body>
+</html>

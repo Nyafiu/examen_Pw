@@ -29,6 +29,14 @@ urlpatterns = [
     path('buscador/',views.buscar),
     path('ingreso_vacuna/',views.ingreso_vacuna),
     path('vacuna_ingresada/',views.datos_vacuna),
+    path('listar_vacuna/',views.listar_vacuna),
+    path('listar_vacunas/',views.listar_vacunas),
+    path('modificar_vacuna/',views.actualizar_vacuna),
+    path('modificar/',views.modificar),
+    path('eliminar_vacuna/',views.eliminar_vacuna),
+    path('eliminacion_vacuna/',views.eliminacion_vacuna),
+    path('busca_vacunas/',views.buscar_vacuna),
+    path('buscador_vacunas/',views.buscar_vacunas),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
