@@ -27,17 +27,23 @@
 
     <h1 class="display-6" style="text-align: center;">Búsqueda por rut</h1>
     <br><br>
-    <form action="/buscador/" method="GET" class="formu" style="margin-left: 450px; margin-right: 450px;">
-        <table>
-            <tr>
-                <td>Ingrese rut:</td>
-                <td><input class="fchico" type="text" name="txt_rut"></td>
-            </tr><br>
-        </table>
-        <br><input style="border-radius: 3px; border: 1.5px black solid;" type="submit" value="Buscar">
-        <button class="botones"><a href="/index/" class="link-dark" style="text-decoration: none;">Volver a inicio</a></button>
-    </form>
 
+    <div class="container">
+        <form action="/buscador/" method="GET" class="formu" style="margin-left: 350px; margin-right: 350px;">
+            <div class="row">
+                <div class="col">
+                    <label for="" class="form-label">Ingrese rut:</label>
+                    <input class="form-control" type="text" name="txt_rut">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <br><input class="botones" type="submit" value="Buscar">
+                    <button class="botones"><a href="/index/" class="link-dark" style="text-decoration: none;">Volver a inicio</a></button>
+                </div>
+            </div>
+        </form>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

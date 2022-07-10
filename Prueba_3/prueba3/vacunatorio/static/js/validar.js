@@ -8,19 +8,19 @@ function validar()
    var nombre_vacuna_aux = document.formulario.txt_vacuna_nombre.value;
 
     if(nombre_aux.length<=2){
-        alert("el nombre debe tener mas de 2 caracteres...");
+        alert("Nombre debe tener más de 2 caracteres...");
         document.formulario.txt_nombre.focus();
         return false;
     }
 
     if(paterno_aux.length<=2){
-        alert("el apellido debe tener mas de 2 caracteres...");
+        alert("Apellido debe tener más de 2 caracteres...");
         document.formulario.txt_appaterno.focus();
         return false;
     }
 
     if(materno_aux.length<=2){
-        alert("el apellido debe tener mas de 2 caracteres...");
+        alert("Apellido debe tener más de 2 caracteres...");
         document.formulario.txt_apmaterno.focus();
         return false;
     }
@@ -38,7 +38,7 @@ function validar()
     }
 
     if(nombre_vacuna_aux.length<=2){
-        alert("el nombre de la vacuna debe tener mas de 2 caracteres...");
+        alert("Nombre de vacuna debe tener más de 2 caracteres...");
         document.formulario.txt_vacuna_nombre.focus();
         return false;
     }
@@ -57,27 +57,27 @@ function validar_vacuna(){
     var administracion = document.formu.txt_administracion.value;
 
     if(vacuna_nombre.length<=2){
-        alert("el nombre de la vacuna debe tener mas de 2 caracteres...");
+        alert("Nombre de vacuna debe tener más de 2 caracteres...");
         document.formu.txt_nombre_vacuna.focus();
         return false;
     }
     if(fabricacion.length<=2){
-        alert("la fabricacion debe tener mas de 2 caracteres...");
+        alert("Nombre del fabricante debe tener más de 2 caracteres...");
         document.formu.txt_fabricacion.focus();
         return false;
     }
     if(tipo_vacuna.length<=2){
-        alert("el tipo de vacuna debe tener mas de 2 caracteres...");
+        alert("Tipo de vacuna debe tener más de 2 caracteres...");
         document.formu.txt_tipo_vacuna.focus();
         return false;
     }
     if(lote.length<=2){
-        alert("el lote debe tener mas de 2 caracteres...");
+        alert("Lote debe tener más de 2 caracteres...");
         document.formu.txt_lote.focus();
         return false;
     }
     if(administracion.length<=2){
-        alert("La administracion debe tener mas de 2 caracteres...");
+        alert("Tipo de administración debe tener más de 2 caracteres...");
         document.formu.txt_administracion.focus();
         return false;
     }

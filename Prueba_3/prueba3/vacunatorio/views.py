@@ -28,10 +28,10 @@ def ingresar_informacion(request):
     if len(nombre_aux)>0 and len(materno_aux)>0 and len(paterno_aux)>0 and len(rut_aux)>0 and len(edad_aux)>0 and len(nombre_vacuna_aux)>0 and len(fecha)>0:
         pro = Informacion(nombre=nombre_aux, apparteno=paterno_aux, apmaterno=materno_aux ,rut=rut_aux, edad=edad_aux, nombre_vacuna=nombre_vacuna_aux, fecha=fecha)
         pro.save()
-        mensaje="Informacion ingresada."
+        mensaje="<h2>Información ingresada</h2>"
     else:
-        mensaje="Debe ingresar la informacion."
-    return HttpResponse(mensaje+"<a href='/index/'>Volver al inicio</a>")
+        mensaje="<h2>Debe ingresar la información...</h2>"
+    return HttpResponse(mensaje+"<br><h2><a href='/index/'>Volver al inicio</a></h2>")
 
 def listar_informacion(request):
     datos = Informacion.objects.all()
@@ -44,8 +44,8 @@ def buscar(request):
         informacion = Informacion.objects.filter(rut__icontains=persona)
         return render(request,"buscador.html",{"informacion":informacion,"query":persona})
     else:
-        mensaje = "<h1>Debe ingresar un rut valido...</h1>"
-        return HttpResponse(mensaje+"<br><h1><a href='/index/'>Volver al inicio</a></h1>")
+        mensaje = "<h2>Debe ingresar un rut válido...</h2>"
+        return HttpResponse(mensaje+"<br><h2><a href='/index/'>Volver al inicio</a></h2>")
 
 # Agregado del examen transversal
 
@@ -73,10 +73,10 @@ def datos_vacuna(request):
     if len(vacuna_aux)>0 and len(fabricante_aux)>0 and len(tipo_vacuna_aux)>0 and len(lote_aux)>0 and len(administracion_aux)>0:
         info=Vacuna(vacuna_nombre=vacuna_aux, fabricante=fabricante_aux, tipo_vacuna=tipo_vacuna_aux, lote=lote_aux, forma_administracion=administracion_aux)
         info.save()
-        mensaje=("Vacuna ingresada")
+        mensaje=("<h2>Vacuna ingresada</h2>")
     else:
-        mensaje=("Error al ingresar la vacuna")
-    return HttpResponse(mensaje+"<br><h1><a href='/index/'>Volver al inicio</a></h1>")
+        mensaje=("<h2>Error al ingresar la vacuna</h2>")
+    return HttpResponse(mensaje+"<br><h2><a href='/index/'>Volver al inicio</a></h2>")
 
 def listar_vacuna(request):
     datos = Vacuna.objects.all()
@@ -92,12 +92,12 @@ def modificar(request):
             info = Vacuna.objects.get(id=id_recibido)
             info.vacuna_nombre = nombre_recibido
             info.save()
-            mensaje = "Nombre de producto modificado"
+            mensaje = "<h2>La vacuna se actualizó correctamente</h2>"
         else:
-            mensaje = "No existe producto para modificar"
+            mensaje = "<h2>El id ingresado no existe</h2>"
     else:
-        mensaje = "Debe ingresar un id para modificar"
-    return HttpResponse(mensaje+"<a href='/index/'>Volver al inicio</a>")
+        mensaje = "<h2>Debe ingresar un id para modificar...</h2>"
+    return HttpResponse(mensaje+"<br><h2><a href='/index/'>Volver al inicio</a></h2>")
 
 def eliminacion_vacuna(request):
     if request.GET["txt_id"]:
@@ -106,12 +106,12 @@ def eliminacion_vacuna(request):
         if vacuna:
             info = Vacuna.objects.get(id=id_recibido)
             info.delete()
-            mensaje="Producto eliminado"
+            mensaje="<h2>Vacuna eliminada</h2>"
         else:
-            mensaje="Producto No eliminado"
+            mensaje="<h2>No se pudo eliminar la vacuna</h2>"
     else:
-        mensaje = "Debe ingresar un id para eliminar"
-    return HttpResponse(mensaje+"<a href='/index/'>Volver al inicio</a>")
+        mensaje = "<h2>Debe ingresar un id para eliminar...</h2>"
+    return HttpResponse(mensaje+"<br><h2><a href='/index/'>Volver al inicio</a></h2>")
 
 def buscar_vacunas(request):
     if request.GET["txt_id"]:
@@ -119,5 +119,5 @@ def buscar_vacunas(request):
         informacion = Vacuna.objects.filter(id=id_vacuna)
         return render(request,"buscar_vacuna.html",{"informacion":informacion,"query":id_vacuna})
     else:
-        mensaje = "<h1>Debe ingresar una id valido...</h1>"
-        return HttpResponse(mensaje+"<br><h1><a href='/index/'>Volver al inicio</a></h1>")
+        mensaje = "<h2>Debe ingresar un id válido...</h2>"
+        return HttpResponse(mensaje+"<br><h2><a href='/index/'>Volver al inicio</a></h2>")

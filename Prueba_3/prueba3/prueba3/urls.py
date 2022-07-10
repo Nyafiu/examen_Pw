@@ -31,7 +31,7 @@ urlpatterns = [
     path('vacuna_ingresada/',views.datos_vacuna),
     path('listar_vacuna/',views.listar_vacuna),
     path('listar_vacunas/',views.listar_vacunas),
-    path('modificar_vacuna/',views.actualizar_vacuna),
+    path('actualizar_vacuna/',views.actualizar_vacuna),
     path('modificar/',views.modificar),
     path('eliminar_vacuna/',views.eliminar_vacuna),
     path('eliminacion_vacuna/',views.eliminacion_vacuna),
