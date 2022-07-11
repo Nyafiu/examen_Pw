@@ -1,6 +1,3 @@
-.f{
-    background-color: rgb(228, 210, 210) 
-}
 
 .formu{
     background-color: rgb(170, 169, 169);
@@ -17,6 +14,9 @@
     border-radius: 3px;
     border: 1.5px black solid;
 }
+
+
+
 /*
 tbody{
     text-transform: uppercase;

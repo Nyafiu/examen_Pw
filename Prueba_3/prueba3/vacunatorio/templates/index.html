@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
-<body class="f">
+<body style="background-color: rgb(213, 222, 226);">
 
     <div class="container">
         <div class="row">
@@ -26,16 +26,17 @@
     </div>
 
     <style>
-      a:hover{
+      .d:hover{
         background-color: rgba(0, 0, 0, 0.199);
-        padding: 10px;
         border-radius: 3px;
         border: none;
+        padding: 7px;
       }
     </style>
 
     <h1 class="display-6" style="text-align: center;">Registro vacunación COVID-19</h1>
     <br><br><br>
+
 
     <center>
       <div class="container">
@@ -45,27 +46,27 @@
               <div class="row">
                 <h1 class="display-6" style="text-align: center; font-size: 2.1rem;">Vacunas</h1>
                 <div class="col">
-                  <hr><a class="link-dark lead" style="text-decoration: none; font-size: 1.8rem;" href="/ingreso_vacuna/">Ingresar</a>
+                  <hr><a class="link-dark lead d" style="text-decoration: none; font-size: 1.8rem;" href="/ingreso_vacuna/">Ingresar</a>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
-                  <br><a class="link-dark lead" style="text-decoration: none; font-size: 1.8rem;" href="/actualizar_vacuna/">Actualizar</a>
+                  <br><a class="link-dark lead d" style="text-decoration: none; font-size: 1.8rem;" href="/actualizar_vacuna/">Actualizar</a>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
-                  <br><a class="link-dark lead" style="text-decoration: none; font-size: 1.8rem;" href="/busca_vacunas/">Buscar</a>
+                  <br><a class="link-dark lead d" style="text-decoration: none; font-size: 1.8rem;" href="/busca_vacunas/">Buscar</a>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
-                  <br><a class="link-dark lead" style="text-decoration: none; font-size: 1.8rem;" href="/eliminar_vacuna/">Eliminar</a>
+                  <br><a class="link-dark lead d" style="text-decoration: none; font-size: 1.8rem;" href="/eliminar_vacuna/">Eliminar</a>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
-                  <br><a class="link-dark lead" style="text-decoration: none; font-size:1.8rem;" href="/listar_vacuna/">Listar</a>
+                  <br><a class="link-dark lead d" style="text-decoration: none; font-size:1.8rem;" href="/listar_vacuna/">Listar</a>
                 </div>
               </div>
             </div>
@@ -75,17 +76,17 @@
               <div class="row">
                 <h1 class="display-6" style="text-align: center; font-size: 2.1rem;">Personas</h1>
                 <div class="col">
-                  <hr><a class="link-dark lead" style="text-decoration: none; font-size: 1.8rem;" href="/ingresar/">Ingresar</a>
+                  <hr><a class="link-dark lead d" style="text-decoration: none; font-size: 1.8rem;" href="/ingresar/">Ingresar</a>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
-                  <br><a class="link-dark lead" style="text-decoration: none; font-size: 1.8rem;" href="/buscar/">Buscar rut</a>
+                  <br><a class="link-dark lead d" style="text-decoration: none; font-size: 1.8rem;" href="/buscar/">Buscar rut</a>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
-                  <br><a class="link-dark lead" style="text-decoration: none; font-size: 1.8rem;" href="/listar/">Listar</a>
+                  <br><a class="link-dark lead d" style="text-decoration: none; font-size: 1.8rem;" href="/listar/">Listar</a>
                 </div>
               </div>
             </div>
@@ -94,16 +95,91 @@
       </div>
     </center>
 
+    <br><br><br>
 
-    <!--
-    <center class="lead">
-        <a class="link-dark" style="text-decoration: none; font-size: 1.8rem;" href="/ingresar/">Ingresar persona</a><br><br>
-        <a class="link-dark" style="text-decoration: none; font-size: 1.8rem;" href="/listar/">Listar personas</a><br><br>
-        <a class="link-dark" style="text-decoration: none; font-size: 1.8rem;" href="/buscar/">Buscar rut</a><br><br>
-        <a class="link-dark" style="text-decoration: none; font-size: 1.8rem;" href="/ingreso_vacuna/">Ingresar vacuna</a><br><br>
-        <a class="link-dark" style="text-decoration: none; font-size: 1.8rem;" href="/actualizar_vacuna/">Actualizar vacuna</a><br><br>
-    </center>
-    -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <span></span>
+        </div>
+        <div class="col">
+          <a href="https://www.minsal.cl/calendario-de-vacunacion-masiva-contra-covid-19/"><img src="{% static 'img/calendario.jpg' %}" alt=""></a>
+        </div>
+        <div class="col">
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <br><br><br>
+
+    <style>
+      .pie{
+        background-color: rgb(172, 184, 190);
+        color: black;
+        text-align: right;
+        margin-top: 20px;
+      }
+      .redes{
+        filter: brightness(120%);
+      }
+      .redes:hover {
+        filter: brightness(70%);
+      }
+    </style>
+
+    <footer class="pie">
+      <div class="p-3 mb-2 text-dark">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <p class="lead" style="text-align: center; font-size: 1.55rem;">Contacto</p>
+              <br>
+              <p class="lead" style="font-size: 1.3rem; text-align: center;">22 5740 100</p>
+              <p class="lead" style="font-size: 1.3rem; text-align: center;">contacto@minsal.com</p>
+            </div>
+            <div class="col">
+              <p class="lead" style="text-align: center; font-size: 1.55rem;">
+                Redes sociales
+                <br><br>
+                <a class="redes" href="https://www.facebook.com/ministeriosaludchile?fref=ts" target="_blank"><img src="{% static 'img/facebook.png' %}" width="50" height="50"></a>
+                <a class="redes" href="https://www.instagram.com/ministeriosalud/" target="_blank"><img src="{% static 'img/insta.png' %}" width="50" height="50"></a>
+                <a class="redes" href="https://www.youtube.com/user/ministeriosaludchile" target="_blank"><img src="{% static 'img/ytt.png' %}" width="50" height="50"></a>
+              </p>
+            </div>
+            <div class="col">
+              <p class="lead" style="text-align: center; font-size: 1.55rem;">
+                Ubicación
+                <br>
+                <div class="mapouter">
+                  <div class="gmap_canvas">
+                    <iframe width="300" height="150" id="gmap_canvas" src="https://maps.google.com/maps?q=Enrique%20Mac%20Iver%20541,%20Santiago&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <a href="https://123movies-to.org">123movies</a><br>
+                    <style>.mapouter{position:relative;text-align:right;height:150px;width:300px;margin-left: 30px;}</style>
+                    <a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+                    <style>.gmap_canvas {overflow:hidden;background:none!important;height:150px;width:300px;}</style>
+                  </div>
+                </div>              
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <img src="{% static 'img/aa.jpg' %}" alt="">
+        </div>
+        <div class="col">
+          <span></span>
+        </div>
+        <div class="col">
+          <span></span>
+        </div>
+      </div>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
