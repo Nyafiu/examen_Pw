@@ -96,20 +96,34 @@
     </center>
 
     <br><br><br>
+    
 
+    <style>
+      .foto{
+        float: left;
+        width: 50%;
+        padding: 5px;
+      }
+
+      .a{
+        content: "";
+        clear: both;
+        display: table;
+      }
+    </style>
+    
+    <br>
     <div class="container">
-      <div class="row">
-        <div class="col">
-          <span></span>
+      <div class="row a">
+        <div class="col foto">
+          <a href="https://www.minsal.cl/calendario-de-vacunacion-masiva-contra-covid-19/" target="_blank"><img src="{% static 'img/calendario.jpg' %}" style="width: 100%;"></a>
         </div>
-        <div class="col">
-          <a href="https://www.minsal.cl/calendario-de-vacunacion-masiva-contra-covid-19/"><img src="{% static 'img/calendario.jpg' %}" alt=""></a>
-        </div>
-        <div class="col">
-          <span></span>
+        <div class="col foto">
+          <a href="https://esri-minsal.maps.arcgis.com/apps/dashboards/039507b890bf4a95906f80248947f2a7" target="_blank"><img src="{% static 'img/puntos.jpg' %}" style="width: 100%;"></a>
         </div>
       </div>
     </div>
+
 
     <br><br><br>
 
